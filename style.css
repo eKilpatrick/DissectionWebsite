@@ -7,6 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    min-width:750px;
 }
 
 html {
@@ -73,12 +74,11 @@ footer p {
 /* SECTIONS */
 
 section {
-    padding-top: 4vh;
-    height: 96vh;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
-
+    position: relative;
+    padding-top: 15vh;
 }
 
 .section-container {
@@ -109,10 +109,6 @@ section {
 
 /* PHOTO SECTION */
 
-#photos {
-    height: 115vh;
-}
-
 div.gallery {
     margin: 5px;
     border: 1px solid #ccc;
@@ -142,9 +138,6 @@ div.desc {
 /* end operation section */
 
 /* Analysis Section */
-#analysis {
-    height: 140vh;
-}
 #bom_electrical {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
