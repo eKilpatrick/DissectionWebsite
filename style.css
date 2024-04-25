@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -14,10 +13,11 @@ html {
 }
 
 p {
-    color: rgb(85,85,85);
+    color: rgb(85, 85, 85);
 }
 
-a, .btn {
+a,
+.btn {
     transition: all 300ms ease;
 }
 
@@ -29,7 +29,8 @@ a, .btn {
     cursor: default;
 }
 
-nav, .nav-links {
+nav,
+.nav-links {
     display: flex;
 }
 
@@ -55,11 +56,7 @@ a:hover {
     color: grey;
     text-decoration: underline;
     text-underline-offset: 1rem;
-    text-decoration-color: rgb(181,181,181);
-}
-
-.section-container {
-    display: flex;
+    text-decoration-color: rgb(181, 181, 181);
 }
 
 footer {
@@ -71,7 +68,9 @@ footer p {
     text-align: center;
 }
 
+
 /* SECTIONS */
+
 section {
     padding-top: 4vh;
     height: 96vh;
@@ -80,12 +79,17 @@ section {
     min-height: fit-content;
 }
 
-/* PROFILE SECTION */
+.section-container {
+    display: flex;
+}
+
+
+/* INTRO SECTION */
+
 #intro {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    height: 50vh;
 }
 
 .intro__pic-container {
@@ -99,3 +103,37 @@ section {
     align-self: center;
     text-align: left;
 }
+
+
+/* PHOTO SECTION */
+
+#photos {
+    height: 115vh;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+
+/* end photo section */
+
+
+/* Operation Section */

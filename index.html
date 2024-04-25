@@ -1,95 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
 
-        <title>Ethan's Embedded Dissection</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
 
-    <body>
-        <nav id="desktop-nav">
-            <div class="logo">ExpertGrill Pocket Thermometer</div>
+    <title>Ethan's Embedded Dissection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            <div>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">ExpertGrill Pocket Thermometer</div>
+
+        <div>
+            <ul class="nav-links">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#market">Market</a></li>
+                <li><a href="#photos">Photos</a></li>
+                <li><a href="#operation">Operation</a></li>
+                <li><a href="#analysis">Analysis</a></li>
+                <li><a href="#reassembly">Reassembly</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="intro">
+        <div class="intro__pic-container">
+            <img src="./assets/logo.png" alt="Thermometer profile picture">
+        </div>
+
+        <div class="intro__text">
+            <h1>Introduction</h1>
+            <br> My name is Ethan Kilpatrick. I am a senior computer engineering student at Mississippi State University. This website serves the purpose of completing an Embedded System dissection for ECE 4723 - Embedded Systems in the Spring of 2023.
+            <br><br> The focus of this website is to detail the reverse engineering of the handheld grill thermometer created by ExpertGrill shown in the picture to the left. A detailed overview and analysis of the product lies ahead.
+        </div>
+    </section>
+
+    <section id="market">
+        <div class="market__text">
+            <h1>Product Market and Retail Information</h1>
+            <br> This pocket thermometer was developed by a company called Expert Grill, which is a brand developed by and for Walmart. All Expert Grill products’ manufacturing is outsourced by Walmart to a company called NexGrill, which is also responsible
+            for manufacturing grills for Costco, Home Depot, and Lowes.
+            <br>
+            <div style="font-size:22px;">Retail Outlets</div>
+
+            <ul style="padding-left:25px;">
+                <li>MSRP: $9.88</li>
+                <li>Walmart: $9.88</li>
+                <li>eBay: $15</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <section id="photos">
+        <h1>Photo Journal</h1>
+
+        <div class="gallery">
+            <a target="_blank" href="./assets/Pic1.jpeg">
+                <img src="./assets/Pic1.jpeg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Packaged Product</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="./assets/Pic2.jpeg">
+                <img src="./assets/Pic2.jpeg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Unboxed Product</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="./assets/Pic3.jpeg">
+                <img src="./assets/Pic3.jpeg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Back View</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="./assets/Pic4.jpeg">
+                <img src="./assets/Pic4.jpeg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Inside View</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="./assets/Pic5.jpeg">
+                <img src="./assets/Pic5.jpeg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Silicon Removed</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="./assets/Pic6.jpeg">
+                <img src="./assets/Pic6.jpeg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">PCB Detached</div>
+        </div>
+
+        <div class="gallery">
+            <a target="_blank" href="./assets/Pic7.jpeg">
+                <img src="./assets/Pic7.jpeg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">PCB Up Close</div>
+        </div>
+
+    </section>
+
+    <section id="operation">
+        <div class="operation-section1" style="display: flex">
+            <div style="padding-right: 25px">
+                <h1>Operation</h1>
+                <br>
+
+                <div style="font-size:20px">Human-Machine Interfaces</div>
+                <ul style="padding-left: 25px">
+                    <li>On/Off Switch</li>
+                    <li>Celsius/Fahrenheit Switch</li>
+                    <li>Hold Button</li>
+                    <li>Play/Stop Button</li>
+                    <li>+Hour Button</li>
+                    <li>+Minute Button</li>
+                    <li>Rotating temperature sensor</li>
+                </ul>
+            </div>
+
+            <div class="gallery" style="height: 350px">
+                <a target="_blank" href="./assets/IO_Interfaces.jpeg">
+                    <img src="./assets/IO_Interfaces.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc">IO Interfaces</div>
+            </div>
+
+            <div class="gallery" style="height: 350px">
+                <a target="_blank" href="./assets/IO_Interfaces2.jpeg">
+                    <img src="./assets/IO_Interfaces2.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc">IO Interfaces Pt2</div>
+            </div>
+        </div>
+
+
+        <div class="usage-timing-diagrams">
+            <div style="font-size:20px; display:inline">Usage Timing Diagrams</div>
+
+
+        </div>
+
+    </section>
+
+    <section id="analysis">
+        <h1>Analysis</h1>
+        <br>
+        <div style="font-size:20px">High-Level Design Diagram</div>
+
+        <div class="img-container">
+            <img src="./assets/HighLevelDiagram.png" alt="Cinque Terre" width="400" height="300">
+        </div>
+
+        <div style="font-size:20px">Detailed Design Block Diagram for Electronic Systems</div>
+
+    </section>
+
+    <section id="reassembly">
+        <h1>Reassembly</h1>
+    </section>
+
+    <footer>
+        <nav>
+            <div class="nav-links-container">
                 <ul class="nav-links">
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#market">Market</a></li>
                     <li><a href="#photos">Photos</a></li>
-                    <li><a href="#operation">Contact</a></li>
+                    <li><a href="#operation">Operation</a></li>
                     <li><a href="#analysis">Analysis</a></li>
                     <li><a href="#reassembly">Reassembly</a></li>
                 </ul>
             </div>
         </nav>
+        <p>Copyright &#169; 2024 Ethan Kilpatrick. All Rights Reserved.</p>
+    </footer>
 
-        <section id="intro">
-            <div class="intro__pic-container">
-                <img src="./assets/logo.png" alt="Thermometer profile picture">
-            </div>
-            
-            <div class="intro__text">
-                <h1>Introduction</h1>
-                <br>
-                My name is Ethan Kilpatrick. I am a senior computer engineering student at Mississippi State University. 
-                This website serves the purpose of completing an Embedded System dissection for ECE 4723 - Embedded Systems 
-                in the Spring of 2023.
-                <br><br>
-                The focus of this website is to detail the reverse engineering of the handheld grill thermometer created by
-                ExpertGrill shown in the picture to the left. A detailed overview and analysis of the product lies ahead.
-            </div>
-        </section>
-
-        <section id="market">
-            <div class="market__text">
-                <h1>Product Market and Retail Information</h1>
-                <br>
-                This pocket thermometer was developed by a company called Expert Grill, which is a brand developed by and for Walmart. All Expert Grill products’ manufacturing is outsourced by Walmart to a company called NexGrill, which is also responsible for manufacturing grills for Costco, Home Depot, and Lowes. 
-                <br>
-                <div style="font-size:22px">Retail Outlets</div>
-                
-                <ul>
-                    <li>MSRP: $9.88</li>
-                    <li>Walmart: $9.88</li>
-                    <li>eBay: $15</li>
-                </ul>
-            
-            </div>
-        </section>
-
-        <section id="photos">
-            <h1>Photo Journal</h1>
-        </section>
-
-        <section id="operation">
-
-        </section>
-
-        <section id="analysis">
-
-        </section>
-
-        <section id="reassembly">
-
-        </section>
-
-        <footer>
-            <nav>
-                <div class="nav-links-container">
-                    <ul class="nav-links">
-                        <li><a href="#intro">Intro</a></li>
-                    <li><a href="#market">Market</a></li>
-                    <li><a href="#photos">Photos</a></li>
-                    <li><a href="#operation">Contact</a></li>
-                    <li><a href="#analysis">Analysis</a></li>
-                    <li><a href="#reassembly">Reassembly</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <p>Copyright &#169; 2024 Ethan Kilpatrick. All Rights Reserved.</p>
-        </footer>
-
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
 
 </html>
