@@ -137,22 +137,22 @@ div.desc {
 /* end operation section */
 
 /* Analysis Section */
-#bom_electrical {
+#bom {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
 
-#bom_electrical td, #bom_electrical th {
+#bom td, #bom th {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
-#bom_electrical tr:nth-child(even){background-color: #f2f2f2;}
+#bom tr:nth-child(even){background-color: #f2f2f2;}
 
-#bom_electrical tr:hover {background-color: #ddd;}
+#bom tr:hover {background-color: #ddd;}
 
-#bom_electrical th {
+#bom th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
