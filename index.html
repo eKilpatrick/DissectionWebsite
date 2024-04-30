@@ -1,16 +1,12 @@
 <!--
     Still left to complete
         - Operation
-            -Usage timing diagrams
+** at simrall            -Usage timing diagrams
         - Analysis
-            -Detailed design block diagrams for electronic systems
-            -Tables showing expected and extreme values during operation
+** at simrall            -Tables showing expected and extreme values during operation
             -Component-Level Schematic
-            -Finish Electrical BOM (Still 2 ICs to figure out what they are)
-            -Non-Electrical BOM
         - Reassembly
-            -Complete reassembly
-        - Lessons Learned
+** at simrall            -Complete reassembly
 -->
 
 <!DOCTYPE html>
@@ -46,7 +42,7 @@
 
         <div class="intro__text">
             <h1>Introduction</h1>
-            <br> My name is Ethan Kilpatrick. I am a senior computer engineering student at Mississippi State University. This website serves the purpose of completing an Embedded System dissection for ECE 4723 - Embedded Systems in the Spring of 2023.
+            <br> My name is Ethan Kilpatrick. I am a senior computer engineering student at Mississippi State University. This website serves the purpose of completing an Embedded System dissection for ECE 4723 - Embedded Systems in the Spring of 2023. I decided to choose this product because it's something I use all the time. When I'm grilling out on the patio with my Dad the easiest way to get the perfectly medium rare steak is to check the temperature.
             <br><br> The focus of this website is to detail the reverse engineering of the handheld grill thermometer created by ExpertGrill shown in the picture to the left. A detailed overview and analysis of the product lies ahead.
         </div>
     </section>
@@ -54,17 +50,35 @@
     <section id="market">
         <div class="market__text">
             <h1>Product Market and Retail Information</h1>
-            <br> This pocket thermometer was developed by a company called Expert Grill, which is a brand developed by and for Walmart. All Expert Grill products’ manufacturing is outsourced by Walmart to a company called NexGrill, which is also responsible
+
+            <div style="font-size:20px">Background Information</div>
+            <div>The thermometer was invented in 1612 when Santorio Santorio applied a scale to an air thermoscope, thus creating an air thermometer.
+                A thermoscope was capable of distinguishing between different temperatures, but without a scale of any kind.
+                The first modern thermometer was invented in 1714 by Daniel Gabriel Fahrenheit in 1714. Fahrenheit was a German physicist who introduced the standard temperature scale that bears his name. He divided the freezing and boiling points of water into 180 degrees; 32 degress was the freezing point and 212 degrees was the boiling point.
+                This scale was based around the temperature of the human body at 100 degrees, which has since been adjusted to 98.6 degrees.
+            </div>
+
+            <br> 
+            <div style="font-size:20px">More on Expert Grill Thermometer</div>
+            This pocket thermometer was developed by a company called Expert Grill, which is a brand developed by and for Walmart. All Expert Grill products’ manufacturing is outsourced by Walmart to a company called NexGrill, which is also responsible
             for manufacturing grills for Costco, Home Depot, and Lowes.
-            <br>
-            <div style="font-size:22px;">Retail Outlets</div>
+            <br><br>
+
+            <div style="font-size:20px;">Retail Outlets</div>
 
             <ul style="padding-left:25px;">
                 <li>MSRP: $9.88</li>
                 <li>Walmart: $9.88</li>
                 <li>eBay: $15</li>
             </ul>
+            <br>
 
+            <div style="font-size:20px">Competing Products</div>
+            <ul style="padding-left:25px">
+                <li>Thermapen ONE: $76.30 (all the bells and whistles)</li>
+                <li>KIZEN Instant Read Meat Thermometer: $12.69 (similar price with more functionality)</li>
+                <li>Cuisinart CSG-200: $35.00 (Infrared sensor)</li>
+            </ul>
         </div>
     </section>
 
@@ -167,13 +181,19 @@
     <section id="analysis">
         <h1>Analysis</h1>
         <br>
-        <div style="font-size:20px">High-Level Design Diagram</div>
 
+        <div style="font-size:20px">High-Level Design Diagram</div>
         <div class="img-container">
-            <img src="./assets/HighLevelDiagram.png" alt="Cinque Terre" width="400" height="300">
+            <img src="./assets/HighLevelDiagram.png" alt="Cinque Terre" width="650" height="500">
         </div>
 
+        <br>
+
         <div style="font-size:20px">Detailed Design Block Diagram for Electronic Systems</div>
+        <div class="img-container">
+            <img src="./assets/FlowDiagram.png" alt="Cinque Terre" width = "900" height="800">
+        </div>
+
         <br>
 
         <div style="font-size:20px">Tables of Expected/Extreme Values</div>
@@ -265,7 +285,7 @@
                 <td>$0.12</td>
             </tr>
             <tr>
-                <td>C1, C2</td>
+                <td>C3, C4</td>
                 <td>Murata Electronics</td>
                 <td>GRM31CD80J107MEA8L</td>
                 <td>100 uF capacitor</td>
@@ -273,7 +293,7 @@
                 <td>**$0.20 ($0.10ea)</td>
             </tr>
             <tr>
-                <td>C3, C4, C5, C6, C7, C8, C9, C10</td>
+                <td>C1, C2, C5, C6, C7, C8, C9, C10</td>
                 <td>Murata Electronics</td>
                 <td>GCM21BD70J106KE02L</td>
                 <td>10 uF capacitor</td>
@@ -283,26 +303,26 @@
             <tr>
                 <td>U1</td>
                 <td>Microchip Technology</td>
-                <td>ATMEGA88PA-ANR</td>
-                <td>32-pin Microcontroller</td>
+                <td>AT89C51</td>
+                <td>8-bit Microcontroller with 4K Bytes Flash</td>
                 <td>1</td>
-                <td>$1.92</td>
+                <td>$1.00</td>
             </tr>
             <tr>
                 <td>U2 - B33Y</td>
-                <td></td>
-                <td></td>
-                <td>IC</td>
+                <td>Maxim</td>
+                <td>MAX809MEUR</td>
+                <td>3 Pin Reset Circuit IC</td>
                 <td>1</td>
-                <td></td>
+                <td>$0.90</td>
             </tr>
             <tr>
                 <td>U3 - HapJc</td>
-                <td></td>
-                <td></td>
-                <td>IC</td>
+                <td>Texas Instruments</td>
+                <td>TPS3809K33DBVR</td>
+                <td>Supervisory Circuits 2.93 Volt Sup</td>
                 <td>1</td>
-                <td></td>
+                <td>$0.22</td>
             </tr>
             <tr>
                 <td>Q1, Q2 - J3Y</td>
@@ -353,7 +373,7 @@
                 <td>**$0.34 ($0.169ea)</td>
             </tr>
         </table>
-        <div>Total Price: $x.xx</div>
+        <div>Total Price: $6.22</div>
         <br>
         <div>* Estimated due to lack of markings/documentation</div>
         <div>** Price when bought in bulk</div>
@@ -362,7 +382,6 @@
         <div style="font-size:20px">Mechanical Bill of Materials</div>
         <table id="bom">
             <tr>
-                <th>Item Label</th>
                 <th>Manufacturer</th>
                 <th>Man. Part Num</th>
                 <th>Description</th>
@@ -370,12 +389,32 @@
                 <th>Cost</th>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Custompart.net</td>
+                <td>N/A</td>
+                <td>Plastic housing for the front portion of the thermometer</td>
+                <td>1</td>
+                <td>$0.50 (estimate)</td>
+            </tr>
+            <tr>
+                <td>Custompart.net</td>
+                <td>N/A</td>
+                <td>Plastic housing for the rear portion of the thermometer</td>
+                <td>1</td>
+                <td>$0.50 (estimate)</td>
+            </tr>
+            <tr>
+                <td>Custompart.net</td>
+                <td>N/A</td>
+                <td>Silicon grip that connects the front and rear housing of the thermometer and allows for easy grip</td>
+                <td>1</td>
+                <td>$0.60 (estimate)</td>
+            </tr>
+            <tr>
+                <td>Custompart.net</td>
+                <td>N/A</td>
+                <td>Food Touch Grade One End Pointed Head Closed Thermometer Thermocouple Protection Tube</td>
+                <td>1</td>
+                <td>$0.80</td>
             </tr>
         </table>
 
@@ -383,6 +422,19 @@
 
     <section id="reassembly">
         <h1>Reassembly</h1>
+        <br><br>
+
+        <div style="font-size:20px">Lessons Learned</div>
+        <div>
+            Digging into the history of a product and breaking into it to see its inner workings has been a super fascinating assignment.
+            However, this task has come with many challenges that took unique problem-solving and critical thinking to overcome. 
+            When trying to reverse engineer products that are on the market, you quickly find out that a lot of information is proprietary and not easy to find. 
+            At first, I imagined that the schematics for the product would be readily available on the internet so this assignment wouldn't be very difficult, but boy 
+            was I wrong! It took countless hours of using a flashlight, magnifying glass, and multimeter to pinpoint what was going on with some of the connections on the PCB. 
+            Another difficult part of this task was finding what some of the products were on the board that weren't labeled. I ended up having to take some educated guesses, specifically 
+            with the microcontroller which was covered in epoxy during production so it was impossible to tell what it was without destroying the product. All in all, this has been a wonderful 
+            experience and a great lesson in the world of Embedded Systems.
+        </div>
     </section>
 
     <footer>
