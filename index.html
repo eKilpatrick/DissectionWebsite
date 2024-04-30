@@ -1,9 +1,5 @@
 <!--
     Still left to complete
-        - Operation
-            -Usage timing diagrams
-        - Analysis
-            -Tables showing expected and extreme values during operation
         - Reassembly
             -Complete reassembly
 -->
@@ -170,8 +166,59 @@
 
 
         <div class="usage-timing-diagrams">
-            <div style="font-size:20px; display:inline">Usage Timing Diagrams</div>
+            <div style="font-size:20px; display:block">Usage Timing Diagrams</div>
 
+            <div class="wave-container" style="height:fit-content; width: fit-content; border: 1px solid #ccc;">
+                <a target="_blank" href="./assets/Oscillator-Frequency.png">
+                    <img src="./assets/Oscillator-Frequency.png" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div style="text-align:center">Oscillator Frequency Wave (32.75 kHz)</div>
+            </div>
+
+            <br>
+
+            <div class="wave-container" style="height:fit-content; width: fit-content; border: 1px solid #ccc;">
+                <a target="_blank" href="./assets/Buzzer-Wave.png">
+                    <img src="./assets/Buzzer-Wave.png" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div style="text-align:center">Buzzer Wave</div>
+            </div>
+
+            <br>
+
+            <div class="wave-container" style="height:fit-content; width: fit-content; border: 1px solid #ccc;">
+                <a target="_blank" href="./assets/CelsiusSwitch-Wave.png">
+                    <img src="./assets/CelsiusSwitch-Wave.png" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div style="text-align:center">Fahrenheit to Celsius switch flipped to Celsius</div>
+            </div>
+
+            <br>
+
+            <div class="wave-container" style="height:fit-content; width: fit-content; border: 1px solid #ccc;">
+                <a target="_blank" href="./assets/HoldBtn-Wave.png">
+                    <img src="./assets/HoldBtn-Wave.png" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div style="text-align:center">HOLD Button Pressed</div>
+            </div>
+
+            <br>
+
+            <div class="wave-container" style="height:fit-content; width: fit-content; border: 1px solid #ccc;">
+                <a target="_blank" href="./assets/HourBtn-Wave.png">
+                    <img src="./assets/HourBtn-Wave.png" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div style="text-align:center">+H Button Pressed</div>
+            </div>
+
+            <br>
+
+            <div class="wave-container" style="height:fit-content; width: fit-content; border: 1px solid #ccc;">
+                <a target="_blank" href="./assets/MinBtn-Wave.png">
+                    <img src="./assets/MinBtn-Wave.png" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div style="text-align:center">+M Button Pressed</div>
+            </div>
 
         </div>
 
@@ -196,6 +243,26 @@
         <br>
 
         <div style="font-size:20px">Tables of Expected/Extreme Values</div>
+        <table id="bom">
+            <tr>
+                <th>Supply Voltage</th>
+                <th>Operating Voltage</th>
+                <th>Current Draw</th>
+                <th>Mode</th>
+            </tr>
+            <tr>
+                <td>1.5 V</td>
+                <td>1.5 V</td>
+                <td>0.04 A</td>
+                <td>ON - Standard mode. Operates under these conditions despite button presses, buzzer noise, temperature change, etc.</td>
+            </tr>
+            <tr>
+                <td>1.1 V</td>
+                <td>0 V</td>
+                <td>0 A</td>
+                <td>Began to fail and become unfunctional at 1.1 V and eventually powered down.</td>
+            </tr>
+        </table>
         <br>
 
         <div style="font-size:20px">Component Level Schematic</div>
@@ -422,8 +489,47 @@
 
     </section>
 
-    <section id="reassembly">
+    <section id="reassembly" style="display:block">
         <h1>Reassembly</h1>
+
+        <div class="gallery-container">
+            <div class="gallery">
+                <a target="_blank" href="./assets/Reassembly1.jpeg">
+                    <img src="./assets/Reassembly1.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc">All parts and pieces together</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="./assets/Reassembly2.jpeg">
+                    <img src="./assets/Reassembly2.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc">Resoldered the Buzzer back to the PCB</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="./assets/Reassembly3.jpeg">
+                    <img src="./assets/Reassembly3.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc">Fastened PCB back into the rear casing</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="./assets/Reassembly4.jpeg">
+                    <img src="./assets/Reassembly4.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc">Reattached the temperature sensor</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="./assets/Reassembly5.jpeg">
+                    <img src="./assets/Reassembly5.jpeg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc">Screwed together front and rear casing, attached Silicon housing</div>
+            </div>
+        </div>
+
+
         <br><br>
 
         <div style="font-size:20px">Lessons Learned</div>
