@@ -132,7 +132,7 @@
     </section>
 
     <section id="operation" style="clear:both; display:block; position:relative;">
-        <div class="operation-section1" style="display: flex">
+        <div class="operation-section1" style="display: flex; overflow: hidden">
             <div style="padding-right: 25px">
                 <h1>Operation</h1>
                 <br>
@@ -489,10 +489,9 @@
 
     </section>
 
-    <section id="reassembly" style="display:block">
-        <h1>Reassembly</h1>
-
-        <div class="gallery-container">
+    <section id="reassembly" style="display:block; clear:both; position:relative">
+        <div class="reassembly-section1" style="height:fit-content; overflow:hidden">
+            <h1>Reassembly</h1>
             <div class="gallery">
                 <a target="_blank" href="./assets/Reassembly1.jpeg">
                     <img src="./assets/Reassembly1.jpeg" alt="Cinque Terre" width="600" height="400">
@@ -529,16 +528,25 @@
             </div>
         </div>
 
+        <div class="reassembly-section2">
+            <br><br>
+            <div style="font-size:20px;">Lessons Learned</div>
+            <div>
+                Digging into the history of a product and breaking into it to see its inner workings has been a super fascinating assignment. However, this task has come with many challenges that took unique problem-solving and critical thinking to overcome. When trying
+                to reverse engineer products that are on the market, you quickly find out that a lot of information is proprietary and not easy to find. At first, I imagined that the schematics for the product would be readily available on the internet
+                so this assignment wouldn't be very difficult, but boy was I wrong! It took countless hours of using a flashlight, magnifying glass, and multimeter to pinpoint what was going on with some of the connections on the PCB. Another difficult
+                part of this task was finding what some of the products were on the board that weren't labeled. I ended up having to take some educated guesses, specifically with the microcontroller which was covered in epoxy during production so it was
+                impossible to tell what it was without destroying the product. All in all, this has been a wonderful experience and a great lesson in the world of Embedded Systems.
+            </div>
+        </div>
 
-        <br><br>
-
-        <div style="font-size:20px">Lessons Learned</div>
-        <div>
-            Digging into the history of a product and breaking into it to see its inner workings has been a super fascinating assignment. However, this task has come with many challenges that took unique problem-solving and critical thinking to overcome. When trying
-            to reverse engineer products that are on the market, you quickly find out that a lot of information is proprietary and not easy to find. At first, I imagined that the schematics for the product would be readily available on the internet so
-            this assignment wouldn't be very difficult, but boy was I wrong! It took countless hours of using a flashlight, magnifying glass, and multimeter to pinpoint what was going on with some of the connections on the PCB. Another difficult part
-            of this task was finding what some of the products were on the board that weren't labeled. I ended up having to take some educated guesses, specifically with the microcontroller which was covered in epoxy during production so it was impossible
-            to tell what it was without destroying the product. All in all, this has been a wonderful experience and a great lesson in the world of Embedded Systems.
+        <div class="reassembly-video">
+            <br>
+            <div style="font-size:20px">Reassembly Functionality Check</div>
+            <video width="320" height="240" controls>
+                <source src="./assets/ReassemblyVid.mp4" type="video/mp4">
+                Your Browser does not support the video.
+            </video>
         </div>
     </section>
 
